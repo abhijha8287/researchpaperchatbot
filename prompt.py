@@ -7,7 +7,7 @@ from langchain_core.prompts import PromptTemplate, load_prompt
 load_dotenv()
 
 # Load model
-model = ChatOpenAI()
+model = ChatOpenAI(model_name="gpt-4", api_key=st.secrets['api_key'], temperature=0)
 
 # Streamlit UI
 st.header('Research Tool')
